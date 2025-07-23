@@ -2,14 +2,20 @@
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
+// Start in dark mode (no .light-mode class)
+body.classList.remove("light-mode");
+themeToggle.textContent = "☀️ Day Mode"; // show "Day Mode" option
+
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("light-mode");
+
   if (body.classList.contains("light-mode")) {
-    themeToggle.textContent = "🌙 Night Mode";
+    themeToggle.textContent = "🌙 Night Mode"; // show option to go back to night
   } else {
-    themeToggle.textContent = "☀️ Day Mode";
+    themeToggle.textContent = "☀️ Day Mode"; // show option to switch to day
   }
 });
+
 
 // 🧠 Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
