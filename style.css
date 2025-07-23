@@ -592,10 +592,10 @@ textarea {
 
 .intro {
   display: flex;
-  align-items: flex-start; /* align top of avatar and text */
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   padding: 1rem;
-  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 .avatar {
@@ -613,16 +613,13 @@ textarea {
 }
 
 .typewriter {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: var(--accent-pink);
-  border-right: 2px solid var(--accent-pink);
+    color: #f9c6d0; 
+  font-size: 1.5rem;
+  font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
-  width: 20ch;
-  animation: blink-caret 0.75s step-end infinite;
-  margin: 0; /* reset margin so vertically centered nicely */
+  border-right: 2px solid;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
 }
 
 .personal-intro,
@@ -647,9 +644,22 @@ textarea {
     flex-direction: column;
     align-items: center;
   }
+
   .personal-intro,
-  .mission {
-    max-width: 90vw;
-    text-align: center;
-  }
+.mission {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent }
 }
