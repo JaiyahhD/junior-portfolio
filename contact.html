@@ -5,35 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Jai' Davis</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <main>
     <header>
-      <h1>📬 Contact Me</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+      <h1 class="site-title">📬 Contact Me</h1>
+      <nav class="main-nav reveal">
+        <ul>
+        <li><a href="index.html" class="nav-link">🏠 Hub</a></li>
+        <li><a href="projects.html" class="nav-link bratz-btn">💻 Projects</a></li>
+        <li><a href="contact.html" class="nav-link health-btn active">📬 Contact</a></li>
+      </ul>
       </nav>
     </header>
 
-    <section class="contact-form">
-      <h2>Let’s Connect</h2>
-      <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
-        <label>
-          Name:
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Email:
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Message:
-          <textarea name="message" required></textarea>
-        </label>
-        <button type="submit">Send Message</button>
+   <main class="reveal">
+    <section class="intro-text">
+      <h2 class="bratz-glow">✨ Let’s Connect</h2>
+      <p>Got a question, collab idea, or just want to say hi? Drop a message below — I’d love to hear from you!</p>
+    </section>
+
+    <section class="contact-form-section">
+      <form class="contact-form" action="#" method="post">
+        <div class="input-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+        <button type="submit" class="bratz-btn">Send ✨</button>
       </form>
     </section>
+
 
     <section class="social-links">
       <h2>Find Me Online</h2>
