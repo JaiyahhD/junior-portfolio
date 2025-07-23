@@ -84,8 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // ⌨️ Typewriter Effect for Main Header
 const typewriterEl = document.getElementById("typewriter-text");
 const phrases = [
+    "Hi, I'm Jaiyah!",
   "Front-End Dev",
-  "Mom of 4",
+  "Mother of 4",
   "Healthcare Techie"
 ];
 let index = 0;

@@ -458,7 +458,14 @@ textarea {
 }
 
 .intro-text {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* take remaining space */
+  min-width: 280px; /* prevent text from shrinking too much */
+}
+
+.intro-details {
+  margin-top: 1rem; /* spacing from typewriter/greeting */
 }
 
 .intro-hr {
@@ -468,6 +475,38 @@ textarea {
   border-radius: 2px;
 }
 
+.personal-intro,
+.mission {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--accent-purple);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.mission {
+  font-style: italic;
+  text-align: center;
+  color: var(--accent-pink);
+}
+
+/* Responsive tweak: stack avatar and text vertically on narrow screens */
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .intro-text {
+    min-width: unset;
+  }
+  .personal-intro, .mission {
+    max-width: 90vw;
+    text-align: center;
+  }
+}
 /* Vibe Widget Floating Panel */
 .vibe-widget {
   display: flex;
@@ -553,15 +592,64 @@ textarea {
 
 .intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align top of avatar and text */
   gap: 1.5rem;
   padding: 1rem;
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 .avatar {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* makes it a circle */
-  object-fit: cover; /* crops nicely */
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.avatar-typewriter {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--accent-pink);
+  border-right: 2px solid var(--accent-pink);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20ch;
+  animation: blink-caret 0.75s step-end infinite;
+  margin: 0; /* reset margin so vertically centered nicely */
+}
+
+.personal-intro,
+.mission {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--accent-purple);
+  text-align: left;
+}
+
+.mission {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--accent-pink);
+  text-align: center;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .avatar-typewriter {
+    flex-direction: column;
+    align-items: center;
+  }
+  .personal-intro,
+  .mission {
+    max-width: 90vw;
+    text-align: center;
+  }
 }
