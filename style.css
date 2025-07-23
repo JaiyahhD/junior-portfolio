@@ -550,3 +550,18 @@ textarea {
 .theme-toggle-btn:hover {
   background-color: var(--accent-pink);
 }
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* makes it a circle */
+  object-fit: cover; /* crops nicely */
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
