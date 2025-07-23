@@ -58,3 +58,46 @@ function updateTaglineTheme() {
 
 // Run on page load
 updateTaglineTheme();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hour = new Date().getHours();
+  const body = document.body;
+
+  if (hour >= 6 && hour < 12) {
+    // Morning
+    body.classList.add("theme-morning");
+  } else if (hour >= 12 && hour < 18) {
+    // Afternoon
+    body.classList.add("theme-afternoon");
+  } else {
+    // Evening/Night
+    body.classList.add("theme-night");
+  }
+});
+
+// ⌨️ Typewriter Effect for Main Header
+const typewriterEl = document.getElementById("typewriter-text");
+const phrases = [
+  "Front-End Dev",
+  "Mom of 4",
+  "Healthcare Techie"
+];
+let index = 0;
+let charIndex = 0;
+
+function typeWriter() {
+  if (charIndex < phrases[index].length) {
+    typewriterEl.textContent += phrases[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 100);
+  } else {
+    setTimeout(() => {
+      typewriterEl.textContent = "";
+      charIndex = 0;
+      index = (index + 1) % phrases.length;
+      typeWriter();
+    }, 2000);
+  }
+}
+
+typeWriter();
