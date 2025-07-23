@@ -164,23 +164,69 @@ button:hover, .btn:hover {
 }
 
 /* Projects Grid */
-.projects-grid {
+.project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 2rem;
 }
 
 .project-card {
-  background-color: #292931;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  background: var(--card-bg, #fff);
+  border: 2px solid #e7d2f7;
+  border-radius: 1rem;
   padding: 1.5rem;
+  box-shadow: 0 0 10px #eacdfc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(200, 200, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(189, 142, 250, 0.5);
+}
+
+.project-card {
+  background-color: #292931;
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(100, 100, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-card .btn {
+  background: var(--accent, #c06eff);
+  color: goldenrod;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: 1.5rem; /* space between tiles */
+  padding: 1rem 0;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 column on phones */
+  }
 }
 
 /* Contact Form */
@@ -237,3 +283,5 @@ footer {
   background-color: #1e1e2f;
   color: #f0f0f0;
 }
+
+
