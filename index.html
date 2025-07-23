@@ -7,9 +7,9 @@
 
   <!-- Google Fonts: Raleway for title, Bebas Neue for nav -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+
 </head>
 <body>
   <header>
@@ -25,15 +25,28 @@
         <li><a href="contact.html" class="nav-link health-btn">📬 Contact</a></li>
       </ul>
     </nav>
+
+    <!--Theme Toggle Button-->
+    <button id="theme-toggle" class=""theme-toggle-btn">☀️ Day Mode</button>
   </header>
 
   <main class="hub-container">
 
-    <!-- Vibe Check Card -->
-    <section class="vibe-card reveal">
-      <h2 id="vibe-greeting">🌤️ Loading Vibe...</h2>
-      <button id="theme-toggle" class="btn">☀️ Day Mode</button>
-    </section>
+    <!-- Vibe Check Widget -->
+<div class="vibe-widget" id="vibeWidget">
+  <button class="vibe-toggle" id="vibeToggle">✨ Vibe Check</button>
+  <div class="vibe-panel" id="vibe-panel">
+    <p>How you feeling today?</p>
+    <div class="mood-row">
+      <button class="mood-btn" data-mood="happy">😊</button>
+      <button class="mood-btn" data-mood="tired">😴</button>
+      <button class="mood-btn" data-mood="overit">😒</button>
+      <button class="mood-btn" data-mood="focused">🧠</button>
+      <button class="mood-btn" data-mood="softgirl">💅🏽</button>CS:
+    </div>
+    <p id="vibe-response">Pick a mood to get a vibe 💫</p>
+  </div>
+</div>
 
     <!-- Avatar and Greeting -->
     <section class="intro reveal">
@@ -66,6 +79,6 @@
     </div>
   </div>
 </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

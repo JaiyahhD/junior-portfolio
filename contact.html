@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Jai' Davis</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Raleway for title, Bebas Neue for nav -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -13,9 +15,6 @@
     <h1 class="site-title reveal">Jaiyah's Dev Hub</h1>
     <p class="tagline reveal" id="tagline">Motherhood & Melanin</p>
 
-     <!-- Google Fonts: Raleway for title, Bebas Neue for nav -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  
       <h1 class="site-title">📬 Contact Me</h1>
       <nav class="main-nav reveal">
         <ul>
@@ -34,15 +33,17 @@
     </section>
 
     <section class="contact-form-section">
-      <form class="contact-form" action="#" method="post">
-        <div class="input-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
-        <button type="submit" class="bratz-btn">Send ✨</button>
-      </form>
+        <form class="contact-form" action="https://formsubmit.co/jai.kdavis04@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="thank-you.html" />
+            <div class="input-row">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+            <button type="submit" class="bratz-btn">Send ✨</button>
+        </form>
     </section>
+
 
 
     <section class="social-links">

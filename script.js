@@ -101,3 +101,33 @@ function typeWriter() {
 }
 
 typeWriter();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const vibeToggle = document.getElementById("vibeToggle");
+  const vibeWidget = document.getElementById("vibeWidget");
+  const moodButtons = document.querySelectorAll(".mood-btn");
+  const vibeResponse = document.getElementById("vibe-response");
+
+  const moodMessages = {
+    happy: "You’re glowing today! Keep that smile going 🌞",
+    tired: "Rest is productive too. Slow down, Softie 😴",
+    overit: "Girl. Say less. Mood: ‘Don't talk to me’ 😒",
+    focused: "Big brain energy! Go build your empire 🧠✨",
+    softgirl: "Soft. Sweet. Unbothered. Protected 💅🏽💖"
+  };
+
+  // Toggle panel open/close by toggling 'open' on vibeWidget (matches CSS)
+  vibeToggle.addEventListener("click", () => {
+    vibeWidget.classList.toggle("open");
+  });
+
+  // Update vibe response when a mood button is clicked
+  moodButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const mood = btn.getAttribute("data-mood");
+      vibeResponse.textContent = moodMessages[mood] || "Pick a mood to get a vibe 💫";
+    });
+  });
+});
+
+
