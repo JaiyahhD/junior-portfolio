@@ -438,5 +438,22 @@ textarea {
 }
 
 .site-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal; /* Bebas Neue is typically all caps and clean */
+  font-size: 3rem; /* Adjust size as you like */
+  color: var(--accent-pink); /* Optional: add a nice accent color */
+  text-align: center; /* center it if needed */
+  margin-bottom: 1rem;
 }
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-hr {
+  width: 60px;
+  margin: 0.5rem auto 1rem;
+  border: 2px solid var(--accent-pink); /* or your preferred color */
+  border-radius: 2px;
+}
+
