@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const typewriterEl = document.getElementById("typewriter-text");
 const phrases = [
     "Hi, I'm Jaiyah!",
-  "Front-End Dev",
+  "Front-End Developer",
   "Mother of 4",
   "Healthcare Techie"
 ];
